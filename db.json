@@ -1,10 +1,54 @@
 {
   "posts": [
-    { "id": 1, "title": "json-server", "author": "typicode", "comments":  [
-      { "id": 1, "body":  "comment body", "comment-author":  "author"}
-    ]},
-    { "id": 2, "title": "json-server", "author": "valera", "comments":  [
-      { "id": 4, "body":  "comment body", "comment-author":  "author"}
-    ]}
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode",
+      "body": "this is a body",
+      "comments": [
+        {
+          "id": 1,
+          "body": "comment body",
+          "comment-author": "author"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "json-server",
+      "author": "valera",
+      "body": "this is the second body",
+      "comments": [
+        {
+          "id": 4,
+          "body": "comment body",
+          "comment-author": "author"
+        }
+      ]
+    },
+    {
+      "author": "ssss",
+      "title": "title",
+      "body": "my post",
+      "id": 3
+    },
+    {
+      "author": "s111s",
+      "title": "dsf",
+      "body": "aaaa",
+      "id": 4
+    },
+    {
+      "author": "asdfz",
+      "title": "aa",
+      "body": "z",
+      "id": 5
+    },
+    {
+      "author": "ііііі",
+      "title": "",
+      "body": "ііііііііііі",
+      "id": 6
+    }
   ]
 }
