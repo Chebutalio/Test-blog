@@ -8,8 +8,8 @@
       "comments": [
         {
           "id": 1,
-          "body": "comment body",
-          "comment-author": "author"
+          "comment_body": "comment body",
+          "comment_author": "author"
         }
       ]
     },
@@ -21,8 +21,8 @@
       "comments": [
         {
           "id": 4,
-          "body": "comment body",
-          "comment-author": "author"
+          "comment_body": "comment body",
+          "comment_author": "author"
         }
       ]
     },

@@ -17,4 +17,5 @@ export class BlogService {
   addPost(formData: Blog): Observable<Blog> {
     return this.http.post<Blog>(`${environment.baseUrl}posts`, formData);
   }
+
 }

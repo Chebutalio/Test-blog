@@ -1,18 +1,20 @@
 <form [formGroup]="newPostForm" (ngSubmit)="onSubmit()">
   <label>
-    Your name:
+    *Your name:
   </label>
     <input type="text" formControlName="author">
     <div *ngIf="isFieldInvalid('author')">Це поле обов'язкове</div>
   <label>
     Title:
-    <input type="text" formControlName="title">
   </label>
+    <input type="text" formControlName="title">
+
   <label>
-    Your post:
+    *Your post:
+  </label>
     <input type="textarea" formControlName="body">
     <div *ngIf="isFieldInvalid('body')">Це поле обов'язкове</div>
-  </label>
+
 
   <button type="submit" [disabled]="!newPostForm.valid">Submit</button>
 </form>

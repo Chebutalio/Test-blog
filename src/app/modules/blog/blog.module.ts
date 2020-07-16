@@ -5,8 +5,7 @@ import { AddPostModule } from "./add-post/add-post.module";
 import { PostsListModule } from "./posts-list/posts-list.module";
 
 @NgModule({
-  declarations: [
-  ],
+  declarations: [ ],
   imports: [
     CommonModule,
     BlogRoutingModule,
