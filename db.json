@@ -4,27 +4,13 @@
       "id": 1,
       "title": "json-server",
       "author": "typicode",
-      "body": "this is a body",
-      "comments": [
-        {
-          "id": 1,
-          "comment_body": "comment body",
-          "comment_author": "author"
-        }
-      ]
+      "body": "this is a body"
     },
     {
       "id": 2,
       "title": "json-server",
       "author": "valera",
-      "body": "this is the second body",
-      "comments": [
-        {
-          "id": 4,
-          "comment_body": "comment body",
-          "comment_author": "author"
-        }
-      ]
+      "body": "this is the second body"
     },
     {
       "author": "ssss",
@@ -48,6 +34,44 @@
       "author": "ііііі",
       "title": "",
       "body": "ііііііііііі",
+      "id": 6
+    }
+  ],
+  "comments": [
+    {
+      "postId": 1,
+      "id": 1,
+      "comment_body": "comment body",
+      "comment_author": "author"
+    },
+    {
+      "postId": 1,
+      "id": 2,
+      "comment_body": "comment body",
+      "comment_author": "author"
+    },
+    {
+      "postId": 2,
+      "id": 3,
+      "comment_body": "comment body",
+      "comment_author": "author"
+    },
+    {
+      "postId": 2,
+      "id": 4,
+      "comment_body": "comment body",
+      "comment_author": "author"
+    },
+    {
+      "comment_author": "sss",
+      "comment_body": "123",
+      "postId": 1,
+      "id": 5
+    },
+    {
+      "comment_author": "121212",
+      "comment_body": "22222",
+      "postId": 1,
       "id": 6
     }
   ]

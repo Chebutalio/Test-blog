@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Blog } from "../../../interfaces/blog.interface";
+import { Post } from "../../../interfaces/post.interface";
 import { BlogService } from "../../../services/blog.service";
 import { FormControl, FormGroup, Validators } from "@angular/forms";
+import {Comment} from "../../../interfaces/comment.interface";
 
 @Component({
   selector: 'app-posts-list',
@@ -10,14 +11,29 @@ import { FormControl, FormGroup, Validators } from "@angular/forms";
 })
 export class PostsListComponent implements OnInit {
 
-  posts: Blog[];
+  posts: Array<Post> = [];
   newComment: FormGroup;
+  postIdentity: number;
+  comments: Array<Comment> = [];
 
   getList() {
     this.blogService.getPosts()
       .subscribe(
-        (posts: Blog[]) => {
+        (posts: Array<Post>) => {
           this.posts = posts;
+        }
+      );
+  }
+
+  getId(id) {
+    return this.postIdentity = id;
+  }
+
+  loadComments(id) {
+    this.blogService.getComments(id)
+      .subscribe(
+        (comments: Array<Comment>) => {
+          this.comments = comments;
         }
       );
   }
@@ -39,4 +55,16 @@ export class PostsListComponent implements OnInit {
   get comment_body() {
     return this.newComment.get('comment_body')
   };
+
+  onSubmit() {
+    const formData = {...this.newComment.value};
+    formData.postId = this.postIdentity;
+    this.blogService.addComment(formData)
+      .subscribe(
+        (response) => {
+          this.newComment.reset();
+        },
+        (errors) => console.error(errors)
+      );
+  }
 }
