@@ -1,0 +1,7 @@
+<p>post-comments works!</p>
+
+<div class="comment" *ngFor=" let comment of comments">
+  {{comment.comment_author}}
+</div>
+
+<button routerLink="new_comment" routerLinkActive="active">Add Comment</button>

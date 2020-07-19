@@ -23,7 +23,7 @@ export class BlogService {
     return this.http.post<Comment>(`${environment.baseUrl}comments`, formData)
   }
 
-  getComments(id: number): Observable<Array<Comment>> {
+  getComments(id: string): Observable<Array<Comment>> {
     return this.http.get<Array<Comment>>(`${environment.baseUrl}posts/${id}/comments`)
   }
 }
