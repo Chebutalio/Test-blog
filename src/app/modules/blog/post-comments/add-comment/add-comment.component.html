@@ -1,24 +1,24 @@
-<!--<form [formGroup]="newComment" (ngSubmit)="onSubmit()">-->
+<form [formGroup]="newComment" (ngSubmit)="onSubmit()">
 
-<!--  &lt;!&ndash; Comment author &ndash;&gt;-->
-<!--  <label>-->
-<!--    *Your name:-->
-<!--  </label>-->
-<!--  <input type="text" formControlName="comment_author">-->
-<!--  <div *ngIf="comment_author.invalid && (comment_author.dirty || comment_author.touched)">-->
-<!--    Name is required.-->
-<!--  </div>-->
+  <!-- Comment author -->
+  <label>
+    *Your name:
+  </label>
+  <input type="text" formControlName="comment_author">
+  <div *ngIf="comment_author.invalid && (comment_author.dirty || comment_author.touched)">
+    Name is required.
+  </div>
 
-<!--  &lt;!&ndash; Comment &ndash;&gt;-->
-<!--  <label>-->
-<!--    Your comment:-->
-<!--  </label>-->
-<!--  <input type="textarea" formControlName="comment_body">-->
-<!--  <div *ngIf="comment_body.invalid">-->
-<!--    Your Message is too long.-->
-<!--  </div>-->
+  <!-- Comment -->
+  <label>
+    Your comment:
+  </label>
+  <input type="textarea" formControlName="comment_body">
+  <div *ngIf="comment_body.invalid">
+    Your Message is too long.
+  </div>
 
-<!--  &lt;!&ndash; Button &ndash;&gt;-->
-<!--  <button type="submit" [disabled]="!newComment.valid" (click)="getId(post.id)">Add comment</button>-->
-<!--</form>-->
+  <!-- Button -->
+  <button type="submit" [disabled]="!newComment.valid">Add comment</button>
+</form>
 work

@@ -35,6 +35,12 @@
       "title": "",
       "body": "ііііііііііі",
       "id": 6
+    },
+    {
+      "author": "new post",
+      "title": "new title",
+      "body": "my post",
+      "id": 7
     }
   ],
   "comments": [
@@ -79,6 +85,12 @@
       "comment_body": "22222",
       "postId": 3,
       "id": 7
+    },
+    {
+      "comment_author": "my name",
+      "comment_body": "my comment",
+      "postId": "7",
+      "id": 8
     }
   ]
 }

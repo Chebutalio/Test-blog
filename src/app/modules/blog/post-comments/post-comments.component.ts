@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Comment } from "../../../interfaces/comment.interface";
-import { ActivatedRoute, Router } from "@angular/router";
+import { ActivatedRoute } from "@angular/router";
 import { BlogService } from "../../../services/blog.service";
 
 @Component({
@@ -13,8 +13,7 @@ export class PostCommentsComponent implements OnInit {
   comments: Comment[] = [];
 
   constructor( private blogService: BlogService,
-               private route: ActivatedRoute,
-               private router: Router) { }
+               private route: ActivatedRoute) { }
 
   ngOnInit(): void {
 
