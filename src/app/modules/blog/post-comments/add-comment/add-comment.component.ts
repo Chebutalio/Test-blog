@@ -38,7 +38,7 @@ export class AddCommentComponent implements OnInit {
     this.blogService.addComment(formData)
       .subscribe(
         () => {
-          this.router.navigate([`blog/${formData.postId}/comments`]).then(r => {});
+          this.router.navigate([`blog/${formData.postId}/comments`]).then();
         },
         (errors) => console.error(errors)
       );

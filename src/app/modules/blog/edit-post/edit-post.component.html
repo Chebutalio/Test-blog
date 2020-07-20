@@ -1,22 +1,25 @@
-<form [formGroup]="newPostForm" (ngSubmit)="onSubmit()">
+<div class="wrapper" *ngIf="post">
+  <form [formGroup]="editPostForm" (ngSubmit)="onSubmit()">
 
-  <label>
-    *Your name:
-  </label>
+    <label>
+      *Your name:
+    </label>
     <input type="text" formControlName="author">
     <div *ngIf="isFieldInvalid('author')">Це поле обов'язкове</div>
 
-  <label>
-    Title:
-  </label>
+    <label>
+      Title:
+    </label>
     <input type="text" formControlName="title">
 
-  <label>
-    *Your post:
-  </label>
+    <label>
+      *Your post:
+    </label>
     <input type="textarea" formControlName="body">
     <div *ngIf="isFieldInvalid('body')">Це поле обов'язкове</div>
 
 
-  <button type="submit" [disabled]="!newPostForm.valid">Submit</button>
-</form>
+    <button type="submit" [disabled]="!editPostForm.valid">Submit</button>
+  </form>
+
+</div>

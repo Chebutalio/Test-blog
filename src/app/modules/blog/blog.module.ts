@@ -4,6 +4,7 @@ import { BlogRoutingModule } from "./blog-routing.module";
 import { AddPostModule } from "./add-post/add-post.module";
 import { PostsListModule } from "./posts-list/posts-list.module";
 import { PostCommentsModule } from "./post-comments/post-comments.module";
+import { EditPostModule } from "./edit-post/edit-post.module";
 
 @NgModule({
   declarations: [],
@@ -12,7 +13,8 @@ import { PostCommentsModule } from "./post-comments/post-comments.module";
     BlogRoutingModule,
     AddPostModule,
     PostsListModule,
-    PostCommentsModule
+    PostCommentsModule,
+    EditPostModule
   ]
 })
 export class BlogModule { }

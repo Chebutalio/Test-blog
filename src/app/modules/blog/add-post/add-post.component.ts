@@ -35,7 +35,7 @@ export class AddPostComponent implements OnInit {
       this.blogService.addPost(formData)
         .subscribe(
           () => {
-            this.router.navigate(['blog']).then(r => {} );
+            this.router.navigate(['blog']).then();
           },
           (errors) => console.error(errors)
         )

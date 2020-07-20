@@ -6,6 +6,7 @@ const routes: Routes = [
   { path: 'new_post', loadChildren: () => import('./add-post/add-post.module').then(m => m.AddPostModule)},
   { path: ':id/comments/new_comment', loadChildren: () => import('./post-comments/add-comment/add-comment.module').then(m => m.AddCommentModule)},
   { path: ':id/comments', loadChildren: () => import('./post-comments/post-comments.module').then(m => m.PostCommentsModule)},
+  { path: ':id/edit', loadChildren: () => import('./edit-post/edit-post.module').then(m => m.EditPostModule)},
 ];
 
 @NgModule({

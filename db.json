@@ -13,7 +13,7 @@
       "body": "this is the second body"
     },
     {
-      "author": "ssss",
+      "author": "dasfasdf123",
       "title": "title",
       "body": "my post",
       "id": 3
@@ -91,6 +91,12 @@
       "comment_body": "my comment",
       "postId": "7",
       "id": 8
+    },
+    {
+      "comment_author": "1 name",
+      "comment_body": "dsdfsdf",
+      "postId": "7",
+      "id": 9
     }
   ]
 }
