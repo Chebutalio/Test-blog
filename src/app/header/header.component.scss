@@ -1,8 +1,11 @@
+@import "../stylings/variables";
+
 .header {
   height: 100px;
-  background: #5CCCCC;
+  background: $color-primary-light;
   display: flex;
   align-items: center;
+  margin-bottom: 20px;
 }
 
 .header__logo {
@@ -11,11 +14,12 @@
 
 .header__logo-link {
   text-decoration: none;
-  color: #FFFFFF;
+  color: $color-primary-darkest;
   font-weight: bold;
   font-size: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .header__logo-link:hover {
-  color: #006363;
+  color: #FFFFFF;
 }
