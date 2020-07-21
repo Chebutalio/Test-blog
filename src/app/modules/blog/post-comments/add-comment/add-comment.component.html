@@ -1,24 +1,27 @@
-<form [formGroup]="newComment" (ngSubmit)="onSubmit()">
+<form class="comment-form" [formGroup]="newComment" (ngSubmit)="onSubmit()">
 
   <!-- Comment author -->
-  <label>
-    *Your name:
-  </label>
-  <input type="text" formControlName="comment_author">
-  <div *ngIf="comment_author.invalid && (comment_author.dirty || comment_author.touched)">
-    Name is required.
+  <div class="form-element">
+    <label class="form-element__title">
+      *Your name:
+    </label>
+    <input class="form-element__input" type="text" formControlName="comment_author">
+    <div class="form-element__error" *ngIf="comment_author.invalid && (comment_author.dirty || comment_author.touched)">
+      Name is required.
+    </div>
   </div>
 
   <!-- Comment -->
-  <label>
-    Your comment:
-  </label>
-  <input type="textarea" formControlName="comment_body">
-  <div *ngIf="comment_body.invalid">
-    Your Message is too long.
+  <div class="form-element">
+    <label class="form-element__title">
+      *Your comment:
+    </label>
+    <textarea class="form-element__input form-element__textarea" formControlName="comment_body"></textarea>
+    <div class="form-element__error" *ngIf="comment_body.invalid && (comment_author.dirty || comment_author.touched)">
+      The field is empty or your message is too long.
+    </div>
   </div>
 
   <!-- Button -->
-  <button type="submit" [disabled]="!newComment.valid">Add comment</button>
+  <button class="btn" type="submit" [disabled]="!newComment.valid">Add comment</button>
 </form>
-work

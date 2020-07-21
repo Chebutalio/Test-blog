@@ -62,3 +62,8 @@
   @include button();
   margin-bottom: 20px;
 }
+
+.btn:hover {
+  background: $color-secondary-darkest;
+  color: $color-secondary-lightest;
+}

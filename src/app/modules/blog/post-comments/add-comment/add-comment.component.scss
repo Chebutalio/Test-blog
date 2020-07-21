@@ -1,0 +1,7 @@
+@import "../../../../stylings/variables";
+@import "../../add-post/add-post.component";
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+}

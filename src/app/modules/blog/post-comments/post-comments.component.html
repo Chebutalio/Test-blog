@@ -9,7 +9,7 @@
     <p class="post__body">{{post.body}}</p>
   </div>
 
-  <div class="comments">
+  <div class="comments" *ngIf="comments.length > 0; else elseTemplate">
     <h3 class="comments__header">Comments:</h3>
     <div class="comment" *ngFor=" let comment of comments">
       <h4 class="comment__header">{{comment.comment_author}}</h4>
@@ -17,6 +17,9 @@
       <hr class="comment__line">
     </div>
   </div>
+  <ng-template #elseTemplate>
+    <h4 class="no-comments">There are no comments yet.</h4>
+  </ng-template>
 
   <button class="btn" routerLink="new_comment" routerLinkActive="active">Add Comment</button>
 </div>

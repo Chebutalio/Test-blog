@@ -20,7 +20,7 @@ export class AddCommentComponent implements OnInit {
   ngOnInit(): void {
     this.newComment = new FormGroup({
       comment_author: new FormControl('', Validators.required),
-      comment_body: new FormControl('', Validators.maxLength(255))
+      comment_body: new FormControl('', [Validators.maxLength(255), Validators.required])
     });
   }
 
