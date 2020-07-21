@@ -1,7 +1,22 @@
-<p>post-comments works!</p>
+<div class="content" *ngIf="post">
 
-<div class="comment" *ngFor=" let comment of comments">
-  {{comment.comment_author}}
+  <div class="post">
+    <div class="post__title">
+      <h2 class="post__title-header">{{post.title}}</h2>
+      <h4 class="post__title-author">By {{post.author}}</h4>
+    </div>
+
+    <p class="post__body">{{post.body}}</p>
+  </div>
+
+  <div class="comments">
+    <h3 class="comments__header">Comments:</h3>
+    <div class="comment" *ngFor=" let comment of comments">
+      <h4 class="comment__header">{{comment.comment_author}}</h4>
+      <p class="comment__body">{{comment.comment_body}}</p>
+      <hr class="comment__line">
+    </div>
+  </div>
+
+  <button class="btn" routerLink="new_comment" routerLinkActive="active">Add Comment</button>
 </div>
-
-<button routerLink="new_comment" routerLinkActive="active">Add Comment</button>

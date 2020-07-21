@@ -1,0 +1,64 @@
+@import "../../../stylings/variables";
+
+.content {
+  border: 1px dotted $color-primary-darkest;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.post {
+  padding: 10px;
+}
+
+.post__title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.post__title-header {
+  margin: 0 0 0 10px;
+  font-weight: bolder;
+  color: $color-primary-darkest;
+  font-size: 3rem;
+}
+
+.post__title-author {
+  margin-right: 10px;
+  font-weight: normal;
+  font-size: 1rem;
+  color: #656565;
+}
+
+.post__body {
+  line-height: 2rem;
+  font-size: 1.2rem;
+}
+
+.comments__header {
+  color: $color-secondary-darkest;
+  font-size: 1.4rem;
+}
+
+.comment {
+  margin-left: 30px;
+}
+
+.comment__header {
+  color: $color-secondary-dark;
+}
+
+.comment__body {
+  margin-left: 20px;
+}
+
+.comment__line {
+  border-top: 2px dashed $color-secondary;
+  margin-bottom: 20px;
+}
+
+.btn {
+  @include button();
+  margin-bottom: 20px;
+}

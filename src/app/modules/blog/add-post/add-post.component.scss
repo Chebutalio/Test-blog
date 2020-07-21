@@ -1,0 +1,61 @@
+@import "../../../stylings/variables";
+
+.add-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-element {
+  margin-bottom: 20px;
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.form-element__input {
+  height: 30px;
+  width: 100%;
+  padding-left: 10px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  border: 1px solid $color-primary-darkest;
+  margin-bottom: 10px;
+}
+
+.form-element__textarea {
+  height: 100px;
+  font-size: .9rem;
+  padding-top: 5px
+}
+
+.btn:disabled {
+  width: 110px;
+  height: 40px;
+  border-width: 1px;
+  border-radius: 10px;
+  background: #B4B4B4;
+  color: #656565;
+  cursor: default;
+}
+
+.btn {
+  @include button();
+
+  &:hover:not(:disabled) {
+    background: $color-primary;
+    color: $color-primary-light;
+  }
+}
+
+.form-element__title {
+  margin-left: 0;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.form-element__error {
+  font-size: .8rem;
+  color: #FF3333;
+}
+

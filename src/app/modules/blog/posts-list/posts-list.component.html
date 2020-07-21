@@ -4,15 +4,15 @@
 
 <div class="post-card" *ngFor="let post of posts">
   <div class="post-card__content">
-    <button class="btn btn_edit" routerLink="{{post.id}}/edit">Edit post</button>
+      <button class="btn btn_edit" routerLink="{{post.id}}/edit">Edit post</button>
 
     <div class="post-card__title">
       <h2 class="post-card__header">{{post.title}}</h2>
-      <h4 class="post-card__author">{{post.author}}</h4>
+      <h4 class="post-card__author">By {{post.author}}</h4>
     </div>
 
     <p class="post-card__body">{{post.body}}</p>
 
-    <button class="btn" routerLink="{{post.id}}/comments">Go to comments</button>
+    <button class="btn btn_comments" routerLink="{{post.id}}/comments">Go to comments</button>
   </div>
 </div>

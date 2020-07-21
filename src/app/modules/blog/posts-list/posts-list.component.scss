@@ -15,19 +15,15 @@
 
 .post-card__content {
   padding: 10px 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .btn {
-  width: 110px;
-  height: 40px;
-  border-width: 1px;
-  border-radius: 10px;
-  background: $color-primary-light;
-  color: $color-primary-darkest;
+  @include button();
 }
 
 .btn:hover {
-  cursor: pointer;
   background: $color-primary;
   color: $color-primary-light;
 }
@@ -37,9 +33,11 @@
   border-radius: 4px;
   background: $color-secondary-light;
   color: $color-secondary-darkest;
+  display: block;
+  margin-right: 0;
 }
 
-.btn_edit:hover {
+.btn_edit:hover, .btn_add:hover {
   background: $color-secondary-darkest;
   color: $color-secondary-lightest;
 }
@@ -48,4 +46,36 @@
   width: 200px;
   font-weight: bolder;
   font-size: 1.2rem;
+  background: $color-secondary-light;
+  color: $color-secondary-darkest;
+}
+
+.post-card__title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 0;
+}
+
+.post-card__header {
+  margin: 0 0 0 10px;
+  font-weight: bolder;
+  color: $color-primary-darkest;
+  font-size: 3rem;
+}
+
+.post-card__author {
+  margin-right: 10px;
+  font-weight: normal;
+  font-size: 1rem;
+  color: #656565;
+}
+
+.btn_comments {
+  display: block;
+  margin-left: 0;
+}
+
+.post-card__body {
+  line-height: 2rem;
 }
