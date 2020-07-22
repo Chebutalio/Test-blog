@@ -11,7 +11,6 @@ import { ActivatedRoute, Router } from "@angular/router";
 export class AddCommentComponent implements OnInit {
 
   newComment: FormGroup;
-  postId: string;
 
   constructor(private blogService: BlogService,
               private route: ActivatedRoute,
